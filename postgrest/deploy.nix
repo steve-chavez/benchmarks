@@ -16,7 +16,7 @@ let
         host    all all 127.0.0.1/32 trust
         host    all all ::1/128 trust
       '';
-      initialScript = ./sql/chinook.sql; # Here goes the sample db
+      initialScript = ./sql/read_data.sql; # Here goes the sample db
     };
 
     systemd.services.postgrest = {

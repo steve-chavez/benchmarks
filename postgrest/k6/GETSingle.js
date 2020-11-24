@@ -48,6 +48,7 @@ export let options = {
 const myFailRate = new Rate('failed requests');
 
 export default function() {
-  let res = http.get(URL + "/artist?select=*&artist_id=eq.3");
+  let id =  Math.floor((Math.random() * 1000000) + 1);
+  let res = http.get(URL + "/read?select=*&id=eq." + id);
   myFailRate.add(res.status !== 200);
 }
